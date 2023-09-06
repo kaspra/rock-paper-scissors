@@ -1,38 +1,159 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Noto+Sans+Old+Permic&family=Open+Sans:wght@500;600&family=Oswald:wght@500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Ubuntu:wght@300;400;500;700&family=Ysabeau+Infant:wght@1;100;200;300;400;500;600;700;800;900;1000&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url(../public/images/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+}
+
+.turn-result{
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  padding-top: 10px;
+}
+
+.game-body{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 23px;
+}
+
+.game-choice{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.ai-hand{
+  width: 300px;
+  border: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.user-hand{
+  width: 300px;
+  border: none;
+  transform: scaleX(-1);
+}
+
+.result{
+  color: white;
+  text-align: center;
+}
+
+.final-result{
+  font-size: 36px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.reset-btn {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 4px 10px;
+  color: white;
+  font-size: 36px;
+  cursor: pointer;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.button-div{
+  display: flex;
+  gap: 20px;
+  padding-top: 10px;
+}
+
+.button{
+  background: #640909;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.btn-img{
+  transform: scaleX(-1);
+}
+
+@media screen and (max-width: 428px) {
+  .App{
+    height: 90vh;
   }
-  to {
-    transform: rotate(360deg);
+
+  .turn-result {
+    padding-top: 20px;
+    font-size: 24px;
+  }
+  
+  .game-body {
+    width: 90%;
+    font-size: 18px;
+  }
+
+  .ai-hand {
+    width: 150px;
+  }
+
+  .user-hand {
+    width: 150px;
+  }
+
+  .btn-img {
+    width: 70px;
+  }
+
+  .final-result {
+    font-size: 30px;
+    padding: 0 22px;
+  }
+  
+  .reset-btn {
+    font-size: 32px;
+  }
+}
+
+
+@media screen and (orientation: landscape) and (max-width: 720px){
+  .game-body {
+    width: 90%;
+    font-size: 18px;
+  }
+  .ai-hand {
+    width: 120px;
+  }
+  .user-hand {
+    width: 120px;
+  }
+  .btn-img {
+    width: 50px;
+  }
+  .turn-result {
+    padding-top: 8px;
+    font-size: 26px;
+  }
+  .final-result {
+    font-size: 22px;
+    margin-top: -16px;
+  }
+  .reset-btn {
+    font-size: 24px;
+  }
+  .button-div{
+    padding-top: 0;
   }
 }
